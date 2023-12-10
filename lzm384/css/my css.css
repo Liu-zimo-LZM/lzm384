@@ -1,0 +1,30 @@
+@charset "utf-8";
+body {
+    background-color: #E5DECD;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+}
+div#box{
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+}
+img{border:0;vertical-align: middle;}
+a{color: #DC3030;text-decoration: none;}
+a:hover{color: #68FF6B}
+
+.tbbeijing {
+    width: 567;
+    border: 2;
+    height: 372;
+    color: black;
+}
+.table-bg {
+	background:url("../images/img/VCT_Spark_RGB_Red.png"); 
+	background-position: center; 
+	background-size: 1000px 1082px; 
+	position: relative; 
+	left: 13px; 
+	bottom: 40px;
+}

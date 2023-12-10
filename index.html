@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<title>刘子墨的主页</title>
+<meta charset="utf-8">
+<link href="css/my css.css" rel="stylesheet" type="text/css">
+</head>
+<style type="text/css">
+*{margin: 0;padding: 0;}
+	#div1{position: relative;border:1px solid #0ff;width:1100px; height: 180px;margin:0px 0px 0px 1270px;overflow: hidden;}
+	#div1 ul{position: absolute;left: 0;}
+	#div1 ul li{list-style: none;width:200px;float: left;padding: 10px;height: 160px;}
+	#div1 ul li img{width:100%;}
+
+	   #img{
+            width: 1100px;
+            height: 659px;
+            margin: 0 auto;
+            padding: 0px;
+            border: 1px solid red;
+            /* 设置相对位置，只有将外层元素设置相对位置，子元素设置绝对位置，才能将子元素放置在父元素内部的特定位置 */
+            position: relative;
+		    left: 610px;
+		   	top: -1050px
+        }
+        #img>.lleft{
+            
+            width: 23px;
+            height: 40px;
+            /* 设置子元素绝对位置 */
+            position: absolute;
+            left: 0px;
+            top: 48%;
+        }
+        #img>.rright{
+            width: 28px;
+            height: 42px;
+            position: absolute;
+            right: 0px;
+            top: 48%;
+        }
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var oDiv=document.getElementById('div1');
+		var oUl=oDiv.getElementsByTagName('ul')[0];
+		var aLi=oUl.getElementsByTagName('li');
+		var aA=document.getElementsByTagName('a');//获取向右向左的箭头
+		var timer=null;
+		var iSpeed=10;
+		oUl.innerHTML+=oUl.innerHTML;//定义图片可以循环播放
+		oUl.style.width=aLi.length*aLi[0].offsetWidth+'px';//定义外层ul的宽度，根据图片的个数和每个图片的宽度计算，保证总宽度是可调整的
+		function fnMove(){
+			if(oUl.offsetLeft<-oUl.offsetWidth/2){
+				oUl.style.left=0;
+			}else if(oUl.offsetLeft>0){
+				oUl.style.left=-oUl.offsetWidth/2+'px';
+			}//定义到边界的时候，实现无缝衔接
+			oUl.style.left=oUl.offsetLeft+iSpeed+'px';
+//定义图片的右边距随着速度不断不断增加，或减小，实现运动的效果
+		}
+		timer=setInterval(fnMove,30);
+		aA[0].onclick=function(){
+			iSpeed=-10;
+//按下左箭头，定义向左运动
+		}
+		aA[1].onclick=function(){
+			iSpeed=10;
+//按下右箭头，定义向右运动
+		}
+		oDiv.onmouseover=function(){
+			clearInterval(timer);
+//鼠标移动到图片上，清除定时器，停止运动
+		}
+		oDiv.onmouseout=function(){
+			timer=setInterval(fnMove,30);
+//鼠标移出，重新开启定时器，重新运动
+		}
+	};
+</script>
+<body>
+<video width="2500px" controls="controls" autoplay="autoplay" loop="loop" >
+  <source src="images/img/Valorant_Deadlock_Homepage_Desktop.mp4" type="video/mp4" >
+</video>
+<br>
+	<table style="margin: 0px auto;"><tr>
+<a href="" target="_blank" >421首页</a><a> | </a>
+<a href="https://playvalorant.com/" target="_blank">瓦罗兰特首页</a><a> | </a>
+<a target="_blank" href="英雄小赏/英雄小赏.html">英雄小赏</a><a> | </a>
+<a href="武器鉴赏/武器鉴赏.html" target="_blank">武器图鉴</a><a> | </a>
+<a href="地图欣赏/地图欣赏.html" target="_blank">地图欣赏</a><a> | </a>
+<a href="关于作者/关于作者.html" target="_blank">关于作者</a></tr></table>
+	<div style="color: #F95D60;font-family: 微软雅黑;font-size: 50px;position: relative;top: -1050px;">
+	<p>Welcome to my net!</p>
+	</div>
+    <audio controls="controls" style="position: relative; left: 0px; bottom: 1150px" autoplay="autoplay">
+      <source src="music/英雄联盟、Against the Current - Legends Never Die.mp3" type="audio/mp3" >
+    </audio>
+<video width="1800" controls="controls" style="left: -150px;position: relative;">
+  <source src="images/img/gzc_1000035_0bc3vmapmaaay4ajyqouxrsjlk6d62vqb5sa.f622.mp4" type="video/mp4">
+</video>
+	<img src="images/img/float-zm.webp" alt="" width="300" style="float: right;"/>
+	<img src="images/img/float-npc.webp" alt="" width="300" style="position: absolute;right: 0px;"/>
+	<img src="英雄小赏/img/weixin_code.webp" alt="" width="300" style="position: absolute;right:0px;margin-top: 220px;"/>
+	<img src="英雄小赏/img/wxCode.webp" alt="" width="200" style="position: absolute;right:0px;margin-top: 400px;margin-right: 50px;"/>
+	<br>
+	<p style="color:#FFFFFF; font-size: 70px; position:relative; left: -840px;bottom: 15px;">英雄展示</p>
+	<br>
+<table class="table-bg" border="5" align="center" cellpadding="1" cellspacing="1" id="表格1">
+  <tbody>
+    <tr>
+      <td width="200" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=6"><img src="images/img/06.png" width="200" height="308" alt="" target="_blank"/></a></td>
+      <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=2"><img src="images/img/02.png" width="200" height="308" alt="" target="_blank"/></a></td>
+      <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=14"><img src="images/img/14.png" width="200" height="308" alt="" target="_blank"/></a></td>
+	  <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=23"><img src="images/img/23.png" width="200" height="308" alt="" target="_blank"/></a></td>
+	  <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=11"><img src="images/img/11.png" width="200" height="308" alt="" target="_blank"/></a></td>
+    </tr>
+    <tr>
+      <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=1"><img src="images/img/01.png" width="200" height="308" alt="" target="_blank"/></a></td>
+	  <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=9"><img src="images/img/09.png" width="200" height="308" alt=""/></a></td>
+      <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=5"><img src="images/img/05.png" width="200" height="308" alt="" target="_blank"/></a></td>
+      <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=13"><img src="images/img/13.png" width="200" height="308" alt="" target="_blank"/></a></td>
+	  <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=8"><img src="images/img/08.png" width="200" height="308" alt="" target="_blank"/></a></td>
+    </tr>
+    <tr>
+	  <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=10"><img src="images/img/10.png" width="200" height="308" alt="" target="_blank"/></a></td>
+      <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=4"><img src="images/img/04.png" width="200" height="308" alt="" target="_blank"/></a></td>
+      <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=7"><img src="images/img/07.png" width="200" height="308" alt="" target="_blank"/></a></td>
+      <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=12"><img src="images/img/12.png" width="200" height="308" alt="" target="_blank"/></a></td>
+	  <td width="100" height="70"><a href="https://val.qq.com/game-data.html?pageType=1&&heroId=3"><img src="images/img/03.png" width="200" height="308" alt="" target="_blank"/></a></td>
+    </tr>
+  </tbody>
+</table>
+	<p style="color:#FFFFFF; font-size: 70px; position:relative; top: -1090px; left: 300px;">武器图鉴</p>
+<div id="div1" style="top: -1090px">
+	<ul>
+	  	<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/classic.png" alt="sorry, not founded!"></a></li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/frenzy.png" alt="please try again!"></a></li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/ghost.png" alt="sorry, not founded!"></a></li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/shorty.png" alt="please try again!"></a></li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/sheriff.png" alt="sorry, not founded!"></a></li>
+		<li style="background-color: #E4F15B"><br>手枪</li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/stinger.png" alt="please try again!"></a></li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/spectre.png" alt="sorry, not founded!"></a></li>
+		<li style="background-color: #09F99C"><br>冲锋枪</li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/bucky.png" alt="please try again!"></a></li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/judge.png" alt="sorry, not founded!"></a></li>
+		<li style="background-color: #FF0004"><br>霰弹枪</li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/bulldog.png" alt="please try again!"></a></li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/guardian.png" alt="sorry, not founded!"></a></li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/phantom.png" alt="please try again!"></a></li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/vandal.png" alt="sorry, not founded!"></a></li>
+		<li style="background-color: #00BEEF"><br>步枪</li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/marshal.png" alt="please try again!"></a></li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/operator.png" alt="sorry, not founded!"></a></li>
+		<li style="background-color: #621CF5"><br>狙击枪</li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/ares.png" alt="please try again!"></a></li>
+		<li><a href="https://val.qq.com/game-data.html?pageType=2" target="_blank"><img src="images/img/odin.png" alt="sorry, not founded!"></a></li>
+		<li style="background-color: #27F40F"><br>机枪</li>
+	</ul>
+</div>
+<div class="box">
+	<p style="color:#FFFFFF; font-size: 70px; position:relative; top: -1065px; left: 300px">地图欣赏</p>
+<div id="img">
+            <a>
+                <img id="imgs" src="images/img/cover (1).png" alt="无法显示" width="100%" height="659px">
+            </a>
+        <div class="lleft">
+            <img src="images/img/b5242c58_E444633_dfbe3152.png" alt="无法显示" width="28">           
+        </div>
+        <div class="rright">
+            <img src="images/img/b5242c58_E444633_dfbe3152 (1).png" alt="无法显示" width="28">
+    </div>
+  </div>
+    <script>
+        var index=0;
+        var img_data=['img/cover (1).png','img/cover (2).png','img/cover (3).png','img/cover (4).png','img/cover (5).png']
+        // 获得相应元素对象
+        var rright=document.getElementsByClassName("rright")[0];
+        var llef=document.getElementsByClassName("lleft")[0];
+        var img=document.getElementById("imgs");
+        // 通过对象的单击事件触动函数调用函数实现图片切换
+        rright.onclick=function(){
+            index++;
+            if(index==img_data.length) index=0;
+            img.setAttribute('src',img_data[index]);
+        }
+        llef.onclick=function(){
+            if(index==0) index=img_data.length;
+            index--;
+            img.setAttribute('src',img_data[index]);
+        }
+</script>
+</div>
+<p align="center" style="bottom: 500px;">计卓2301 刘子墨 U202315384 12月9日</p>	
+</body>
+</html>
